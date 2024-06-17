@@ -10,13 +10,12 @@ use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Illuminate\Database\Eloquent\Model as EloquentModel;
 
 /**
- * @method static static find($id)
- * @method static static findOrFail($id)
- * @method static static firstWhere(array $conditions)
- * @method static array|Collection pluck(string $column)
+ * @mixin EloquentBuilder
+ * @method static static[] cursor()
+ *
  * @method static Collection keyBy(string $column)
  *
- * @method static static[] cursor()
+ * @method static EloquentBuilder|static query()
  * @method static Builder select(string|array $columns)
  * @method static Builder distinct(array $columns)
  * @method static Builder selectRaw(string $query,array $bindings=[])
@@ -39,12 +38,11 @@ use Illuminate\Database\Eloquent\Model as EloquentModel;
  * @method static Builder having(string $column, string $condition, mixed $value=null)
  * @method static Builder havingBetween(string $column, array $values )
  *
- * @method static create(array $values)
- * @method static insert(array $values)
+ * @method static static create(array $attributes=[])
+ * @method static static forceCreate(array $attributes)
+ * @method static insert(array $attributes)
  * @method update(array $set)
  * @method delete()
- * @method static firstOrCreate(array $values=[])
- * @method static updateOrCreate(array $where, array $set=[])
  *
  * @method bool save(array $options=[])
 */
