@@ -38,13 +38,24 @@ use Illuminate\Database\Eloquent\Model as EloquentModel;
  * @method static Builder having(string $column, string $condition, mixed $value=null)
  * @method static Builder havingBetween(string $column, array $values )
  *
+ * @method int increment(string $column)
+ * @method int incrementQuietly(string $column)
+ * @method int decrement(string $column)
+ * @method int decrementQuietly(string $column)
+ *
  * @method static static create(array $attributes=[])
  * @method static static forceCreate(array $attributes)
  * @method static insert(array $attributes)
- * @method update(array $set)
- * @method delete()
+ * @method bool update(array $set)
+ * @method bool updateOrFail(array $set)
+ * @method bool updateQuietly(array $set)
+ * @method bool delete()
  *
  * @method bool save(array $options=[])
+ * @method bool saveOrFail(array $options=[])
+ * @method bool saveQuietly(array $options=[])
+ * @method bool push()
+ * @method bool pushQuietly()
 */
 class Model extends EloquentModel
 {
